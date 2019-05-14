@@ -25,7 +25,7 @@ public class UsuariosResource {
 
         }else{
 
-            responseDTO = ResponseEntity.notFound(userId);
+            responseDTO = ResponseEntity.notFound().build();
         }
         return responseDTO;
 
