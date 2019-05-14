@@ -19,12 +19,9 @@ public class UsuariosResource {
     public ResponseEntity<Long> login(@RequestBody UsuarioDTO usuario){
         ResponseEntity<Long> responseDTO = null;
         Long userId = usuarioService.buscarUsuarioByLogin(usuario);
-        if(userId!= null){
-
+        if(userId != null){
             responseDTO = ResponseEntity.ok(userId);
-
         }else{
-
             responseDTO = ResponseEntity.notFound().build();
         }
         return responseDTO;
